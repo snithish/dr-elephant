@@ -50,10 +50,17 @@ class SparkRestClient(sparkConf: SparkConf) {
   private val client: Client = ClientBuilder.newClient()
 
   private val historyServerUri: URI = sparkConf.getOption(HISTORY_SERVER_ADDRESS_KEY) match {
-    case Some(historyServerAddress) =>
-      val baseUri = new URI(s"http://${historyServerAddress}")
+    case Some(historyServerAddress) => {
+      val baseUri =
+      if(!historyServerAddress.startsWith("http")) {
+        new URI(s"http://${historyServerAddress}")
+      }
+      else {
+        new URI(s"${historyServerAddress}")
+      }
       require(baseUri.getPath == "")
       baseUri
+    }
     case None =>
       throw new IllegalArgumentException("spark.yarn.historyServer.address not provided; can't use Spark REST API")
   }
