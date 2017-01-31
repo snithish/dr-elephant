@@ -82,7 +82,6 @@ source $CONFIG_FILE
 # db_url, db_name ad db_user must be present in the config file
 check=1
 check_config db_url
-check_config db_name
 check_config db_user
 
 if [ $check = 0 ];
