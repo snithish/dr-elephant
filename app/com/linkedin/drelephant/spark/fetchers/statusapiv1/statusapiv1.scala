@@ -139,6 +139,10 @@ class StageData(
 
   val executorRunTime: Long,
 
+  val submissionTime: Option[Date],
+  val firstTaskLaunchedTime: Option[Date],
+  val completionTime: Option[Date],
+
   val inputBytes: Long,
   val inputRecords: Long,
   val outputBytes: Long,

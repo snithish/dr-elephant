@@ -16,9 +16,10 @@
 
 package com.linkedin.drelephant.spark.heuristics
 
+import java.util.Date
+
 import scala.collection.JavaConverters
 import scala.concurrent.duration.Duration
-
 import com.linkedin.drelephant.analysis.{ApplicationType, Severity}
 import com.linkedin.drelephant.configurations.heuristic.HeuristicConfigurationData
 import com.linkedin.drelephant.spark.data.{SparkApplicationData, SparkLogDerivedData, SparkRestDerivedData}
@@ -161,7 +162,10 @@ object StagesHeuristicTest {
     shuffleWriteRecords = 0,
     memoryBytesSpilled = 0,
     diskBytesSpilled = 0,
-    name,
+    name = name,
+    submissionTime = None,
+    firstTaskLaunchedTime = None,
+    completionTime = None,
     details = "",
     schedulingPool = "",
     accumulatorUpdates = Seq.empty,
