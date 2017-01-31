@@ -91,7 +91,7 @@ then
   exit 1
 fi
 
-db_loc="jdbc:mysql://"$db_url"/"$db_name"?characterEncoding=UTF-8"
+db_loc=$db_url"/"$db_name"?characterEncoding=UTF-8"
 
 # db_password is optional. default is ""
 db_password="${db_password:-""}"

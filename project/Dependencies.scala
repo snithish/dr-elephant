@@ -68,6 +68,7 @@ object Dependencies {
     "commons-io" % "commons-io" % commonsIoVersion,
     "javax.ws.rs" % "javax.ws.rs-api" % "2.0.1",
     "mysql" % "mysql-connector-java" % mysqlConnectorVersion,
+    "postgresql" % "postgresql" % "9.1-901.jdbc4",
     "org.apache.hadoop" % "hadoop-auth" % hadoopVersion % "compileonly",
     "org.apache.hadoop" % "hadoop-mapreduce-client-core" % hadoopVersion % "compileonly",
     "org.apache.hadoop" % "hadoop-common" % hadoopVersion % "compileonly",

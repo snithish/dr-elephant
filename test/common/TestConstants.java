@@ -52,7 +52,7 @@ public class TestConstants {
   public static final String DB_DEFAULT_DRIVER_KEY = "db.default.driver";
   public static final String DB_DEFAULT_DRIVER_VALUE = "org.h2.Driver";
   public static final String DB_DEFAULT_URL_KEY = "db.default.url";
-  public static final String DB_DEFAULT_URL_VALUE = "jdbc:h2:mem:test;MODE=MySQL;";
+  public static final String DB_DEFAULT_URL_VALUE = "jdbc:h2:mem:test;MODE=PostgreSQL;";
   public static final String EVOLUTION_PLUGIN_KEY = "evolutionplugin";
   public static final String EVOLUTION_PLUGIN_VALUE = "enabled";
   public static final String APPLY_EVOLUTIONS_DEFAULT_KEY = "applyEvolutions.default";

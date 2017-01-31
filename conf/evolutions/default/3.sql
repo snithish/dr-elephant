@@ -1,9 +1,9 @@
-# --- Indexing on queue for seach by queue feature
+# --- Indexing on queue for search by queue feature
 # --- !Ups
 
-alter table yarn_app_result add column resource_used    BIGINT        UNSIGNED DEFAULT 0    COMMENT 'The resources used by the job in MB Seconds';
-alter table yarn_app_result add column resource_wasted  BIGINT        UNSIGNED DEFAULT 0    COMMENT 'The resources wasted by the job in MB Seconds';
-alter table yarn_app_result add column total_delay      BIGINT        UNSIGNED DEFAULT 0    COMMENT 'The total delay in starting of mappers and reducers';
+alter table yarn_app_result add column resource_used    BIGINT DEFAULT 0;
+alter table yarn_app_result add column resource_wasted  BIGINT DEFAULT 0;
+alter table yarn_app_result add column total_delay      BIGINT DEFAULT 0;
 
 # --- !Downs
 
